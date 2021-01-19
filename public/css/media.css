@@ -1,0 +1,565 @@
+@media (max-width:1080px){
+    .brilliant__img img{
+        width:670px!important;
+    }
+    .collection__item-second img{
+        width:400px;
+    }
+    .collection__item-first img, .collection__item-third img{
+        width: 220px;
+    }
+    .brili__img img{
+        width:500px!important;
+    }
+}
+
+@media (max-width:1024px){
+    .infinity__img img{
+        width:670px;
+    }
+}
+@media (max-width:1000px){
+    .menu__nav{
+        display: block!important;
+    }
+    .menu__nav-input{
+        position: relative;
+        top:0;
+        text-align: center;
+        margin:0 auto;
+        max-width:250px;
+    }
+    .nav{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 30px;
+    }
+    .menu-item{
+        margin-left: 0!important;
+    }
+    .brilliant__img img{
+        width:500px!important;
+    }
+    .approach__item-1,.approach__item-2,.approach__item-3{
+        max-width:90%;
+        padding-right:190px!important;
+        margin-right: 0!important;
+    }
+    .advantages__wrapper-right{
+        margin-top: 110px!important;
+    }
+    .advantages__wrapper-right img{
+        width:400px;
+    }
+    .delivery__img img{
+        max-width:450px!important; 
+    }
+    .quantity{
+        display: flex!important;
+        flex-direction: column;
+        align-items: center;
+    }
+    .quantity p{
+        padding:2px 5px;
+    }
+}
+@media (max-width:945px){
+    .adver__img img{
+        width:400px!important;
+    }
+}
+@media (max-width:925px){
+    .infinity__img img{
+        width:500px;
+    }
+    .prem__column:nth-child(2){
+        position: relative;
+        top:0!important;
+    }
+}
+@media (max-width:850px){
+    .collection__item-second img{
+        width:350px;
+    }
+    .collection__item-first img, .collection__item-third img{
+        width: 170px;
+    }
+    .advantages__wrapper-right{
+        margin-top: 110px!important;
+    }
+    .advantages__wrapper-right img{
+        width:400px;
+    }
+    .advantages__wrapper-right{
+        margin-top: 140px!important;
+    }
+    .advantages__wrapper-right img{
+        width:90%;
+    }
+}
+@media (max-width:800px){
+    .brilliant__img img{
+        width:450px!important;
+    }
+}
+@media(max-width: 768px){
+    .menu-burger__header {
+        position: relative; 
+        width: 30px;
+        height: 35px;
+        display: block;
+        margin-left: 10px;
+    }
+    .header{
+        display: none;
+    }
+    .menu-burger__header span, .menu-burger__header:after, .menu-burger__header:before{
+        height: 3px;
+        width: 100%;
+        position: absolute;
+        background: #515758;
+        margin: 0 auto;
+    }
+    .menu-burger__header span{
+        top: 21px;
+    }
+    .menu-burger__header:after, .menu-burger__header:before{
+        content: '';
+    }
+    .menu-burger__header:after{
+        bottom:5px;
+    }
+    .menu-burger__header:before{
+        top: 15px;
+    }
+    .menu-burger__header.open-menu span {
+        opacity:0; 
+        transition: 0.5s; 
+    }
+    .menu-burger__header.open-menu:before {
+        transform: rotate(38deg);
+        top: 16px;
+        transition: 0.4s;
+    }
+    .menu-burger__header.open-menu:after {
+        transform: rotate(-38deg);
+        bottom: 16px;
+        transition: 0.4s;
+    }
+    .burger__menu{
+        display:block!important;
+    }
+    .nav{
+        display: none!important;
+    }
+    .burger__nav{
+        display: block!important;
+        position: absolute;
+        top: 230px;
+        left:0;
+        background: rgb(245, 246, 246);
+        box-shadow: #ccc;
+        width: 100%;
+        box-shadow: 0 4px 2px -2px rgba(36, 36, 36, 0.17);
+        left: -100%;
+        transition: all 0.4s ease;
+    }
+    .burger__nav.open-menu{
+        left: 0;
+    }
+    .burger__menu li {
+        margin: 40px 0px 40px 33px;
+        font-size: 14px;
+    }
+    .hits__title{
+        text-align: center;
+    }
+    .hits__text{
+        margin-bottom: 15px!important;
+        text-align: center;
+    }
+    .approach__wrapper{
+        display: block!important;
+        text-align: center;
+    }
+    .approach__left{
+        max-width:100%!important;
+    }
+    .approach__right{
+        text-align: center!important;
+        max-width:100%!important;
+    }
+    .approach__item-1,.approach__item-2,.approach__item-3{
+        margin:0 auto!important;
+        margin-bottom: 20px!important;
+    }
+    .form__wrapper{
+        display: block!important;
+        text-align:center;
+    }
+    .form input{
+        width:80%!important;
+    }
+    .delivery__wrapper{
+        display: block!important;
+        text-align: center;
+        max-width:80%;
+        margin:0 auto;
+    }
+    .delivery__wrapper img{
+        max-width:80%!important;
+    }
+    .delivery__item{
+        margin-bottom: 30px;
+    }
+    
+}
+@media (max-width:750px){
+    .infinity__wrapper{
+        display: block!important;
+        text-align: center;
+    }
+    .infinity__more{
+        width:140px;
+        text-align: center;
+        margin:0 auto;
+    }
+    .infinity__img{
+        margin-bottom: 30px;
+    }
+    .infinity__img img{
+        width:90%;
+    }
+    .brilliant__wrapper{
+        display: block!important;
+        text-align: center;
+    }
+    .brilliant__content{
+        display: none;
+    }
+    .brilliant__content2{
+        display: block!important;
+    }
+    .brilliant__content2 .brilliant__title{
+        margin-top: 30px;
+    }
+    .brilliant__img img{
+        width:90%!important;
+    }
+    .adver__wrapper{
+        display: block!important;
+        text-align: center;
+    }
+    .adver__content-btn{
+        margin: 0 auto; 
+    }
+    .adver__img img{
+        width:80%!important;
+    }
+    .adver__img{
+        margin-right: 0!important;
+    }
+    .brili__wrapper{
+        display:block!important;
+        text-align: center;
+    }
+    .brili__img img{
+        width:80%!important;
+    }
+    .brili__btn{
+        margin:0 auto;
+    }
+    .advantages__wrapper{
+        display: block!important;
+        text-align: center;
+        margin:0 auto;
+    }
+    .advantages__wrapper-right{
+        margin-top: 50px!important;
+    }
+    .advantages__item{
+        max-width:500px;
+        margin:0 auto!important;
+        text-align: center;
+    }
+    .banner__items{
+        padding-top: 30px!important;
+    }
+    .cart__item-name{
+        grid-area: header;
+    } 
+    .cart__item-price{
+        grid-area: main;
+    }
+    .quantity{
+        grid-area: sidebar;
+    }
+    .cart__item-size{
+        grid-area: footer;
+    }
+    .cart__item-delete{
+      grid-area:delete;
+    }
+    .cart__item{
+        display: grid;
+        grid-template-columns: 40% 30% 30%!important;
+        align-items: center;
+        justify-content: center;
+        grid-template-areas:"header main sidebar" 
+        "header footer delete";
+        margin-left: 10px;
+    }
+    .quantity{
+        flex-direction: row;
+        text-align: center;
+        justify-content: center;
+    }
+    .cart__nav li:first-child{
+        grid-area:firstli;
+    }
+    .cart__nav li:nth-child(2){
+        grid-area:secondli;
+    }
+    .cart__nav li:nth-child(3){
+        grid-area:thirdli;
+    }
+    .cart__nav li:nth-child(4){
+        grid-area:forthli;
+    }
+    .cart__nav li:nth-child(5){
+        grid-area:fifthli;
+    }
+    .cart__nav ul{
+        display: grid;
+        grid-template-columns: 40% 30% 30%!important;
+        align-items: center;
+        justify-content: center;
+        grid-template-areas:"firstli secondli thirdli" 
+        "firstli forthli fifthli";
+    }
+    .counter-show{
+        margin:0 5px!important;
+    }
+}
+@media (max-width:700px){
+    .collection__item-first img, .collection__item-third img{
+        display: none;
+    }
+}
+@media (max-width:655px){
+    .jewellery__nav ul, .brilliant__nav ul, .wedding__nav ul{
+        display: block!important;
+        text-align: center;
+    }
+    .jewellery__nav li, .brilliant__nav li, .wedding__nav li{
+        border-bottom: 1px solid #ccc;
+        padding:10px;
+    }
+    .jewellery .container, .brilliant .container, .wedding .container{
+        padding:0!important;
+    }
+    .cart__item-name{
+        display: block!important;
+    }
+    .cart__item-content{
+        text-align: center!important;
+    }
+    .cart__item-name-img img{
+        margin-right: 0!important;
+    }
+    .cart__overall{
+        display: block!important;
+        text-align: center;
+        padding-right: 0!important;
+    }
+    .cart__overall-money{
+        margin-top: 5px;
+        margin-left: 0!important;
+    }
+    .cart___form-wrapper{
+        display: block!important;
+    }
+    .cart__form input{
+        width:100%!important;
+    }
+    .cart{
+        overflow: auto!important;
+    }
+}
+@media (max-width:600px){
+    .advertisement__content{
+        background:url('../images/adver-bg2.jpg')!important;
+        background-position: center;
+        background-size:cover;
+        background-repeat: no-repeat;
+    }
+    .advertisement__text-out{
+        display: block!important;
+        text-align: center;
+        font-size: 16px;
+    }
+    .advertisement__title-out{
+        display: block!important;
+        text-align: center;
+        margin-top: 30px;
+        font-weight: 700;
+        font-size: 24px;
+        margin-bottom:20px;
+        margin-top:50px;
+    }
+    .advertisement__title{
+        display: none;
+    }
+    .advertisement__text{
+        display: none;
+    }
+    .approach__title{
+        font-size: 32px!important;
+        text-align: center!important;
+    }
+}
+@media (max-width:550px){
+    .clients__title{
+        font-size: 32px!important;
+    }
+}
+@media (max-width:500px){
+    .present__item:first-child{
+        padding:0!important;
+        width:80%;
+        padding-top: 300px!important;
+        padding-bottom: 20px!important;
+        padding-left: 50px!important;
+    }
+    .present__item:last-child{
+        padding:0!important;
+        width:80%;
+        padding-top: 300px!important;
+        padding-bottom: 20px!important;
+        padding-left: 150px!important;
+    }
+    .cart{
+        width:90%!important;
+    }
+}
+@media (max-width:450px){
+    .menu__wrapper{
+        display: block!important;
+    }
+    .menu__korzina img{
+        width:30px!important;
+    }
+    .menu__korzina{
+        text-align: right;
+        position: absolute;
+        right:0;
+    }
+    .menu__nav-input{
+        top:20px!important;
+        margin:0!important;
+        width:210px;
+        margin-left: auto!important;
+        
+    }
+    .collection__text{
+        max-width:80%!important;
+    }
+    .burger__nav{
+        top:260px;
+    }
+    #first{
+        display: block!important;
+        position: relative;
+        top:50px;
+    }
+    #second{
+        display: none;
+    }
+    .menu__nav-input img{
+        display: none;
+    }
+    .order{
+        text-align: center;
+    }
+    .order__title{
+        padding-top: 20px!important;
+        margin-bottom: 20px!important;
+    }
+    .order__text{
+        margin-bottom: 20px!important;
+    }
+    .advantages__item{
+        display:block!important;
+        margin-bottom: 20px;
+    }
+    .advantages__item-img{
+        margin-right:0!important;
+    }
+}
+@media (max-width:425px){
+    .cart__item{
+        display: grid;
+        overflow: auto;
+        grid-template-columns: 50% 50%!important;
+        align-items: center;
+        justify-content: center;
+        grid-template-areas:"header main" 
+        "header sidebar "
+        "header footer"
+        "header delete";
+        border-bottom: 1px dashed #ccc;
+        padding-bottom: 10px;    
+        margin-top: 10px!important;
+    }
+    .cart__item:last-child{
+        border-bottom:none;
+    }
+    .cart__nav ul{
+        display: grid;
+        grid-template-columns:50% 50%!important;
+        align-items: center;
+        justify-content: center;
+        grid-template-areas:"firstli secondli"
+        "firstli thirdli"
+        "firstli forthli"
+        "firstli fifthli" 
+    }
+    .cart__nav li{
+        margin-bottom: 5px;
+    }
+    .quantity button{
+        padding-left: 0!important;
+        padding-right: 0!important;
+    }
+}
+@media (max-width:400px){
+    h2{
+        font-size:32px!important;
+    }
+    .brilliant__title{
+        font-size: 24px!important;
+    }
+    .adver__content-title{
+        font-size: 30px!important;
+    }
+    .brili__title{
+        font-size: 30px!important;
+    }
+    .approach__title{
+        font-size: 26px!important;
+    }
+    .delivery__title{
+        font-size:30px!important;
+    }
+}
+@media (max-width:360px){
+    .collections__item img{
+        max-width:90%;
+    }
+    .collections__item{
+        text-align: center;
+    }
+    .clients__title{
+        font-size: 26px !important;
+    }
+}

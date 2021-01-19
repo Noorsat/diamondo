@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diamondo</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.8.2/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.8.2/jquery.modal.min.css" />
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="our-carts" id="our-carts"></div>
+    <section class="cart" id="ex1">
+        <div class="cart__title" id="cart__title">
+            Корзина
+        </div>
+        <div class="cart__nav">
+            <ul>
+                <li>Товар</li>
+                 <li>Цена</li>
+                 <li>Кол-во</li>
+                 <li>Размер</li>
+                 <li>Удалить</li>
+            </ul>
+        </div>
+        <div class="cart__items" id="cart__items">
+        </div>
+            <div class="cart__overall">
+                <div class="cart__overall-count" id="cart__overall-count">
+                    Всего товаров: 0
+                </div>
+                <div class="cart__overall-money" id="cart__overall-money">
+                    Сумма покупки: 0 тг
+                </div>
+            </div>
+            <form class="cart__form" id="order-form" action="telegram.php" method="POST">
+                <div class="cart__form-wrapper">
+                    <div class="cart__form-name">
+                        <input type="text" placeholder="Введите имя" name="client__name" required>
+                    </div>
+                    <div class="cart__form-phone">
+                        <input type="text" placeholder="Введите телефон" name="client__phone" required>
+                    </div>
+                    <div class="cart__form-order">
+                        <input type="text" id="cart__form-order-input" placeholder="Введите телефон" name="client__order">
+                    </div>
+                </div>
+                <div class="cart__form-btn">
+                    <button type="submit" id="order-btn">Сделать заказ</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <header class="header">
+        <div class="container">
+            <div class="header__wrapper">
+                <div class="header__wrapper-left">
+                    <div class="header__location">
+                        <div class="header__location-img">
+                            <img src="images/maps-and-flags.svg" alt="">
+                        </div>
+                        <div class="header__location-text">
+                            <p>АЛМАТЫ</p>
+                        </div>
+                    </div>
+                    <div class="header__phone">
+                        <p>+ 7 (771) 395 1015</p>
+                    </div>
+                </div>
+                <div class="header__nav">
+                    <ul>
+                        <li><a href="/order">УКРАШЕНИЯ НА ЗАКАЗ</a></li>
+                        <li><a href="/delivery">ДОСТАВКА И ОПЛАТА</a></li>
+                        <li><a href="/about">DIAMONDO</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="menu">
+        <div class="container">
+            <nav class="burger__nav">
+                <ul class="menu burger__menu">
+                    <li><a href="/jewellery" class="menu__item">УКРАШЕНИЕ</a></li>
+                    <li><a href="/brilliant" class="menu__item">БРИЛЛИАНТЫ</a></li>
+                    <li><a href="/wedding" class="menu__item">ПОМОЛВКА И СВАДЬБА</a></li>
+                    <li><a href="/premium" class="menu__item">PREMIUM</a></li>
+                    <li><a href="/collection" class="menu__item">КОЛЛЕКЦИИ</a></li>
+                    <li><a href="/present" class="menu__item">ПОДАРКИ</a></li>
+                    <li><a href="/order" class="menu__item">УКРАШЕНИЕ НА ЗАКАЗ</a></li>
+                    <li><a href="/delivery" class="menu__item">ДОСТАВКА И ОПЛАТА</a></li>
+                    <li><a href="/about" class="menu__item">DIAMONDO</a></li>
+                </ul>
+            </nav>
+            <div class="menu__wrapper">
+                <div class="menu__img">
+                    <a href="/"><img src="images/logo.png" alt=""></a>
+                </div>
+                <div class="menu-burger__header" id="first">
+                    <span></span>
+                </div>  
+                <div class="menu__login">
+                    <a href="/login">
+                      ВОЙТИ  
+                    </a>
+                </div>
+                <div class="menu__korzina-like">
+                    <div class="menu__korzina-like-img">
+                        <a href="/favorite"><img src="images/heart.png" alt=""></a>
+                    </div>
+                    <div class="menu__korzina-like-counter">
+                        <span id="like-counter">0</span>
+                    </div>
+                </div>
+                <div class="menu__korzina">
+                    <div class="menu__korzina-img">
+                        <a href="#ex1" rel="modal:open"><img class="cartImg" src="images/shopping-cart.svg" alt=""></a>
+                    </div>
+                    <div class="menu__korzina-counter">
+                        <span id="counter">0</span>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-burger__header" id="second">
+                <span></span>
+            </div>  
+            <div class="menu__nav">
+                <div class="menu__nav-input">
+                    <img src="images/search.svg" alt="">
+                    <input type="text" placeholder="ПОИСК">
+                </div>
+                <ul class="nav">
+                    <li class="menu-item" onmouseover=dropMenu(this) onmouseout=hideMenu(this)>
+                        <a class="menu-item-a" href="/jewellery">УКРАШЕНИЕ</a>
+                        <ul class="submenu">
+                            <li>
+                                Кольца
+                            </li>
+                            <li>
+                                Серьги
+                            </li>
+                            <li>
+                                Цепи
+                            </li>
+                            <li>
+                                Подвески
+                            </li>
+                            <li>
+                                Браслеты
+                            </li>
+                            <li>
+                                Колье
+                            </li>
+                            <li>
+                                Броши
+                            </li>
+                            <li>
+                                Посуда
+                            </li>
+                            <li>
+                                Другое
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item" onmouseover=dropMenu(this) onmouseout=hideMenu(this)>
+                        <a class="menu-item-a" href="/brilliant">БРИЛЛИАНТЫ</a>
+                        <ul class="submenu">
+                            <li>
+                                Кольца
+                            </li>
+                            <li>
+                                Серьги
+                            </li>
+                            <li>
+                                Подвески
+                            </li>
+                            <li>
+                                Браслеты
+                            </li>
+                            <li>
+                                Колье
+                            </li>
+                            <li>
+                                Броши
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item" onmouseover=dropMenu(this) onmouseout=hideMenu(this)>
+                        <a class="menu-item-a" href="/wedding">ПОМОЛВКА И СВАДЬБА</a>
+                        <ul class="submenu">    
+                            <li>
+                                Помолвочные
+                            </li>
+                            <li>
+                                Обручальные
+                            </li>
+                            <li>
+                                Украшения для невесты
+                            </li>
+                            <li>
+                                Украшения для жениха
+                            </li>
+                            <li>
+                                Подарки на свадьбу
+                            </li>
+                            <li>
+                                Коллекция Wedding
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="/premium">PREMIUM</a>
+                    </li>
+                    <li class="menu-item" onmouseover=dropMenu(this) onmouseout=hideMenu(this)>
+                        <a class="menu-item-a"  href="/collection">КОЛЛЕКЦИИ</a>
+                        <ul class="submenu">
+                            <li>
+                                Ювелирные
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="/present">ПОДАРКИ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="advertisement">
+        <div class="container">
+            <div class="advertisement__title-out">
+                ДРАГОЦЕННЫЕ<br>КОМПЛИМЕНТЫ
+            </div>
+            <div class="advertisement__text-out">
+                Для единственных и неповторимых
+            </div>
+            <div class="advertisement__content" id="advertisement__content">
+                <div class="advertisement__title">
+                    ДРАГОЦЕННЫЕ<br>КОМПЛИМЕНТЫ
+                </div>
+                <div class="advertisement__text">
+                    Для единственных и неповторимых
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="adver">
+        <div class="container">
+            <div class="adver__title">
+                РАССКАЖИТЕ О САМЫХ ТЁПЛЫХ ЧУВСТВАХ ВМЕСТЕ С DIAMONDO.
+            </div>
+            <div class="adver__wrapper">
+                <div class="adver__img">
+                    <img src="images/adver-left.jpg" alt="">
+                </div>
+                <div class="adver__content">
+                    <div class="adver__content-title">
+                        ЛЮБИТЬ. ДАРИТЬ. УДИВЛЯТЬ!
+                    </div>
+                    <div class="adver__content-text">
+                        Подарки, от которых сердце бьётся чаще.
+                    </div>
+                    <div class="adver__content-btn">
+                        <a href="jewellery.html">ВПЁРЕД, К ПОДАРКАМ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="present">
+        <div class="container">
+            <div class="present__title">
+                ПОДАРКИ
+            </div>
+            <div class="present__items">
+                <div class="present__item">
+                    УКРАШЕНИЕ ДЛЯ НЕЁ
+                </div>
+                <div class="present__item">
+                    ДЛЯ ДЕТЕЙ
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="brili">
+        <div class="container">
+            <div class="brili__title">
+                БРИЛЛИАНТЫ
+            </div>
+            <div class="brili__wrapper">
+                <div class="brili__img">
+                    <img src="images/adv_br1.jpg" alt="">
+                </div>
+                <div class="brili__content">
+                <div class="brili__wrapper-title">
+                    СВЕРКАЙТЕ ЕЩЕ ЯРЧЕ!
+                </div>
+                <div class="brili__text">
+                    Золотые украшения с бриллиантами – классика вне времени.
+                </div>
+                <div class="brili__btn">
+                    <a href="brilliant.html">Выбрать</a>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="all">
+        <div class="container">
+            <div class="all__columns">
+                <div class="all__column">
+                    <div class="all__column__title">
+                        <a href="/about">DIAMONDO LIFE</a>
+                    </div>
+                    <div class="all__column-text">
+                        <a href="/about">О бренде</a>
+                    </div>
+                    <div class="all__column-text">
+                        <a href="/about">Качество</a>
+                    </div>
+                    <div class="all__column-text">
+                        <a href="/about">Дизайн</a>
+                    </div>
+                    <div class="all__column-text">
+                        <a href="/about">Контакты</a>
+                    </div>
+                </div>
+                <div class="all__column">
+                    <div class="all__column__title">
+                        <a href="/jewellery">УКРАШЕНИЕ</a>
+                    </div>
+                    <div class="all__column-text">
+                        <a href="/present">Подарки</a>
+                    </div>
+                    <div class="all__column-text">
+                        <a href="/jewellery">Кольца</a>
+                    </div>
+                    <div class="all__column-text">
+                        <a href="/jewellery">Серьги</a>
+                    </div>
+                    <div class="all__column-text">
+                        <a href="/jewellery">Подвески</a>
+                    </div>
+                    <div class="all__column-text">
+                        <a href="/jewellery">Золото</a>
+                    </div>
+                    <div class="all__column-text">
+                        <a href="/jewellery">Серебро</a>
+                    </div>
+                    <div class="all__column-text">
+                        <a href="/jewellery">Броши</a>
+                    </div>
+                    <div class="all__column-text">
+                        <a href="/jewellery">Браслеты</a>
+                    </div>
+                    <div class="all__column-text">
+                        <a href="/jewellery">Колье</a>
+                    </div>
+                    <div class="all__column-text">
+                        <a href="/jewellery">Цепи</a>
+                    </div>
+                    <div class="all__column-text">
+                        <a href="/jewellery">Коллекции</a>
+                    </div>
+                </div>
+                <div class="all__column">
+                    <div class="all__column__title">
+                        <a href="/delivery">ИНФОРМАЦИЯ</a>
+                    </div>
+                    <div class="all__column-text">
+                        <a href="/delivery">Доставка и оплата</a>
+                    </div>
+                </div>
+                <div class="all__column">
+                    <div class="all__column__title">
+                        <a href="/about">ПАРТНЁРАМ</a>
+                    </div>
+                    <div class="all__column-text">
+                        <a href="/about">Сотрудничать</a>
+                    </div>
+                    <div class="all__column-text">
+                        <a href="/about">Команда DIAMONDO</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <div class="footer_c">
+                    <div class="footer__phone">
+                       <a href="tel:877139510105"><p>+ 7 (771) 395 1015</p></a>
+                    </div>
+                    <div class="footer__co">
+                        <div class="footer__co-img">
+                            <img src="images/copyright.svg" alt="">
+                        </div>
+                        <div class="footer__co-text">
+                            2020 DIAMONDO
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__socials">
+                    <div class="footer__social-insta">
+                        <a href="https://www.instagram.com/diamondo_kz/"><img src="images/instagram.svg" alt=""></a>
+                    </div>
+                    <div class="footer__social-whats">
+                        <a href="https://api.whatsapp.com/send?phone=77713951015"><img src="images/whatsapp.svg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    <script src="js/order.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
